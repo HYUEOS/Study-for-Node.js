@@ -39,7 +39,4 @@ process.stdin.on('readable', function() {
             console.log('err: input is not a number');
         }
     }
-    else {
-        console.log('height : ');
-    }
 });
