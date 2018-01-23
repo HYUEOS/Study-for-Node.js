@@ -44,12 +44,28 @@ var x7 = function(){}; // new function object
 콜백 함수란? (필기해주세요.)
 
 ## 3. Node.js 이벤트 기반 입출력, 비동기 입출력, 모듈
-필기해주세요.
+이 사이트를 참고해주세요.
+<http://yallok.tistory.com/2>
 
 ## 4. 별찍기
 힌트: process.on('readable', 콜백()); 이 scanf 역할을 합니다.
+
+여기서 process 는 process 객체를 뜻하며 현재 실행하고 있는 nodejs 프로그램 자체를 뜻합니다.
+(현재 프로그램의 process)
+
+컴퓨터 공학적으로 process 란 컴퓨터의 운영체제에서 정의 내린 하나의 '작업 단위' 입니다.
+일반적으로 현재 실행되는 한 프로그램은 하나의 process 위에서 돌아가도록 돼있습니다.
+
+별찍기에 대한 자세한 내용은 코드를 참고해주세요.
+
+운영체제에서 정의하는 process 에 대해 자세히 알고 싶다면 이 사이트를 참고해주세요.
+<http://bowbowbow.tistory.com/16>
+
 ## 5. file 입출력
+과제로 수행해주세요.
+
 ## 6. 모듈 만들기
+다음시간에 진행합니다.
 
 ## 과제
 
