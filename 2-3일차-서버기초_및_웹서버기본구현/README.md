@@ -234,9 +234,8 @@ nodejs.org 에서 http 모듈을 보고 request, response 연습을 해보겠습
 ```html
 <html>
     <head>
-        <title>
-            메모하기
-        </title>
+        <meta charset="utf-8">
+        <title>메모하기</title>
     </head>
     <body>
         <form method="post" action="<!-- 제작한 nodejs 파일의 PATH -->">
