@@ -153,16 +153,16 @@ server.listen( {
 // 클라이언트
 var net = require('net');
 // net.Socket 을 만든다. 만들고 해당 포트에 연결시킨다.
-var client = net.createConnection({ port:8124 }, function() {
+var server = net.createConnection({ port:8124 }, function() {
     console.log('connected to server!');
 });
 
 // data 를 받았을 때 실행됨.
-client.on('data', function(data) {
+server.on('data', function(data) {
     console.log('server: ' + data.toString());
 });
 
-client.on('end', function() {
+server.on('end', function() {
     console.log('disconnected from server');
 });
 ```
