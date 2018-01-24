@@ -29,6 +29,7 @@ log 는 리포팅 역할을 해줍니다. 즉, 동작하는 프로그램의 상�
 ### 참고 사이트들
 -   log 데이터 관리의 중요성: <http://www.boan24.com/news/articleView.html?idxno=7156>
 -   log 에서 의미 있는 텍스트를 뽑아 정렬하기: <http://www.dailysecu.com/?mod=news&act=articleView&idxno=4959>
+-   winston logger 사용법: <http://mcpaint.tistory.com/198>
 
 ## 2. 모듈화
 ### 개요
@@ -113,22 +114,46 @@ console.log('사용자 정보 : %s', showUser());
 -   사이트1: <http://wiki.gurubee.net/pages/viewpage.action?pageId=26739929>
 -   사이트2: <http://roydest.tistory.com/entry/HTTP%EB%9E%80>
 
+### HTTP 모듈 사용 예시
+
 ```js
 /**
  * 기본 구조
  */
-var http = require('http');
+ var http = require('http');
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
+ // 웹 서버 객체를 만든다.
+ var server = http.createServer();
+
+ // 웹 서버를 시작하여 3000번 포트에서 대기.
+ var port = 3000;
+ // 서버 listening 시작.
+ server.listen(port, function() {
+     console.log('웹 서버가 시작되었습니다. : %d', port);
+ });
+
+ // 클라이언트 연결 이벤트 처리.
+ server.on('connection', function(client) {
+     var addr = client.address();
+     console.log('클라이언트가 접속했습니다. : %s, %d', addr.address, addr.port);
+ });
+
+ // 클라이언트 요청 이벤트 처리
+ server.on('request', function(req, res) {
+     console.log('클라이언트 요청이 들어왔습니다.');
+     console.dir(req);
+ });
+
+ // 서버 종료 이벤트 처리
+ server.on('close', function() {
+     console.log('서버가 종료됩니다.');
+ });
+
 ```
 
 
 ## 5. http 모듈로 request, response 해보기
-nodejs.org 에서 http 모듈을 보고 request, response 연습을 해보겠습니다. 구글링!
+nodejs.org 에서 http 모듈을 보고 request, response 연습을 해보겠습니다. 구글링! (다 못하면 과제로 뿌리면 되지 뭐.. ㅎㅎㅎㅎㅎㅎㅎ 아니면 내일..?)
 
 
 ## 과제
