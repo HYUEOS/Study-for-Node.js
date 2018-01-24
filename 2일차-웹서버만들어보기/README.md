@@ -89,11 +89,47 @@ console.log('사용자 정보 : %s', showUser());
 
 참고로 javascript 의 모든 변수는 객체라 할 수 있기 때문에 함수든 객체든 모듈로 만들 수 있습니다.
 
-## 3. ip 주소
+## 3. ip 주소, 포트 및 도메인
+
+포트는 운영체제가 TCP/IP 네트워크에서 들어오는 트래픽을 컴퓨터 내에서 실행되고 있는 적절한 프로그램에 분배시키기 위해 할당되는 숫자를 말합니다.
+
+-   포트: <http://memoweb.tistory.com/entry/%ED%8F%AC%ED%8A%B8%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EB%B3%B8%EC%A7%88-port>
+
+-   ip주소: <http://it.donga.com/3106/>
+
+-   Domain Name Server (DNS): <https://xn--3e0bx5euxnjje69i70af08bea817g.xn--3e0b707e/jsp/resources/dns/dnsInfo.jsp>
+
+-   DNS 영상: <https://opentutorials.org/course/228/1455>
+
+-   도메인 기본: <http://blog.koreadaily.com/view/myhome.html?fod_style=B&med_usrid=webtell&cid=748897&fod_no=1>
+
+-   도메인 심화: <https://www.linux.co.kr/unixwebhosting/multidomain/multidomain.htm>
+
+
 
 ## 4. http 모듈로 웹서버 만들기
 
+### HTTP란?
+-   사이트1: <http://wiki.gurubee.net/pages/viewpage.action?pageId=26739929>
+-   사이트2: <http://roydest.tistory.com/entry/HTTP%EB%9E%80>
+
+```js
+/**
+ * 기본 구조
+ */
+var http = require('http');
+
+//create a server object:
+http.createServer(function (req, res) {
+  res.write('Hello World!'); //write a response to the client
+  res.end(); //end the response
+}).listen(8080); //the server object listens on port 8080
+```
+
+
 ## 5. http 모듈로 request, response 해보기
+nodejs.org 에서 http 모듈을 보고 request, response 연습을 해보겠습니다. 구글링!
+
 
 ## 과제
 
@@ -110,7 +146,7 @@ console.log('사용자 정보 : %s', showUser());
         </title>
     </head>
     <body>
-        <form method="post" action="<!-- 제작한 nodejs 파일 이름 -->">
+        <form method="post" action="<!-- 제작한 nodejs 파일의 PATH -->">
             <input type="text">
             <input type="submit" value="제출">
         </form>
