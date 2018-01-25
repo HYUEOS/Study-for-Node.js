@@ -28,8 +28,8 @@ var server = net.createServer( function(client){
 
 // 서버를 열고, client 의 연결을 기다린다.
 server.listen( {
-    host: 'localhost',  // 주소
-    port: 8124,
+    host: 'local',  // 주소
+    port: 80,
     exclusive: true
 }, function() {
     console.log('opened server on', server.address());

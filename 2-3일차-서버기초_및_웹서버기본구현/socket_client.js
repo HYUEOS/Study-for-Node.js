@@ -5,6 +5,10 @@ var server = net.createConnection({ port:8124 }, function() {
     console.log('connected to server!');
 });
 
+server.on('data', function(data) {
+    console.log(data.toString().trim());
+});
+
 // 서버가 connection 을 종료했을 때
 server.on('end', function() {
     console.log('disconnected from server');

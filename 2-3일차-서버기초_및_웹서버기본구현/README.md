@@ -223,6 +223,11 @@ server.write('hello server');
 nodejs.org 에서 http 모듈을 보고 request, response 연습을 해보겠습니다. 구글링! (다 못하면 과제로 뿌리면 되지 뭐.. ㅎㅎㅎㅎㅎㅎㅎ 아니면 내일..?)
 
 
+## 8. npm 및 express 모듈 설치
+npm에 대해: <http://forum.falinux.com/zbxe/index.php?document_srl=572898&mid=lecture_tip>
+express 설치:
+<http://expressjs.com/ko/starter/installing.html>
+
 ## 과제
 
 ### 과제 1
@@ -258,5 +263,11 @@ __심화는 필수 구현이 아닙니다.__
 수욜날 최대한 개념 강의 위주로 진행하고, 실습은 목욜날 많이 진행한다.
 
 소켓으로 채팅 구현이 처음이라 상당히 어렵게 다가올 수 있다. 이를 심화 과제로 돌리는 것도 고려해봐야할 것이다.
+
+소켓 재설명, http 개념, http 모듈, 요청과 응답 까지 한 후 Node.js 의 3가지 특징인
+1.  이벤트 기반 입출력
+2.  비동기 입출력
+3.  모듈과 패키지
+에 대해 다시 한번 짚고 넘어간다.
 
 http 모듈로 get 요청 처리, post 요청 처리에 대해 다뤄봐야한다.
